@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="glass-card">
+    <h1>FutureCoders</h1>
+
+    <div style="font-size: 80px; margin: 20px 0;">
+        👩‍🚀
+    </div>
+
+    <form method="post" style="width: 100%;">
+        {% csrf_token %}
+        
+        <input type="text" name="username" placeholder="email ou usuário" class="input-space" required>
+        <input type="password" name="password" placeholder="senha" class="input-space" required>
+
+        <div class="small-links">
+            <a href="#">Esqueci minha senha</a>
+            <a href="#">Não tem uma conta?</a>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <button type="submit" class="btn-space">Entrar</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
