@@ -9,6 +9,15 @@
         👩‍🚀
     </div>
 
+    {% if messages %}
+        {% for message in messages %}
+            <div style="background: rgba(255, 0, 0, 0.6); padding: 10px; border-radius: 10px; margin-bottom: 15px;">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+
     <form method="post" style="width: 100%;">
         {% csrf_token %}
         
